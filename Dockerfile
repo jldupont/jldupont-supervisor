@@ -12,6 +12,6 @@ COPY ./supervisord.conf    /etc/supervisord.conf
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 
 RUN chmod +x /etc/init.d/supervisord
-RUN chmod +x /docker_entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 CMD ["/docker-entrypoint.sh"]
