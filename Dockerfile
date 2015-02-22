@@ -6,6 +6,7 @@ RUN pip install supervisor --pre
 
 RUN mkdir -p /var/log/supervisor /home/bin /home/config/supervisor /home/python
 
+ADD ./supervisord.init.sh /etc/init.d/supervisord
 ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 CMD ["/usr/bin/supervisord"]
